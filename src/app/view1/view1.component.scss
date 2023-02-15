@@ -1,9 +1,12 @@
 :host {
   height: 100%;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: flex-start;
+  align-content: stretch;
+  overflow: auto;
 }
 .column-layout {
   display: flex;
@@ -12,26 +15,29 @@
 .group {
   justify-content: flex-start;
   align-items: stretch;
-  align-content: flex-start;
-  overflow: auto;
+  align-content: stretch;
+  gap: 16px;
   position: relative;
   padding: 24px;
   min-width: 50px;
   min-height: 50px;
   flex-grow: 1;
-  flex-basis: 0;
+  flex-shrink: 0;
 }
 .row-layout {
   display: flex;
 }
 .group_1 {
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: stretch;
-  align-content: flex-start;
+  align-content: stretch;
   gap: 16px;
   position: relative;
   min-width: 50px;
   min-height: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 .card {
   width: 240px;
@@ -62,6 +68,7 @@
   min-width: 50px;
   min-height: 50px;
   max-width: 360px;
+  flex-shrink: 0;
 }
 .group_4 {
   flex-wrap: wrap;
@@ -91,17 +98,6 @@
   min-width: 240px;
   min-height: 50px;
 }
-.group_7 {
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: flex-start;
-  gap: 16px;
-  position: relative;
-  min-width: 50px;
-  min-height: 50px;
-  flex-grow: 1;
-  flex-basis: 0;
-}
 .tabs {
   min-width: 0;
   min-height: 0;
@@ -115,7 +111,7 @@
   overflow-y: auto;
   flex-shrink: 0;
 }
-.group_8 {
+.group_7 {
   justify-content: flex-start;
   align-items: stretch;
   align-content: flex-start;
@@ -175,7 +171,7 @@
   min-width: 0;
   min-height: 0;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-basis: 0;
 }
 .calendar {
   width: max-content;
